@@ -69,3 +69,13 @@ class Post(models.Model):
 ```
 python manage.py makemigrations
 ```
+
+3. DB에 반영
+    - 이주시켜!
+    - 내가 만든 posts가 제대로 포함되어있는지가 중요. 
+    - 길게 나오는 이유는 장고에 내장된 애들이 같이 이주되어서.
+```
+python manage.py migrate
+```
+
+4. 생성한 모델을 admin에 등록
