@@ -62,5 +62,10 @@ class Post(models.Model):
     # Charfield 는 TextField에 비해 짦은 내용
     title = models.CharField(max_length=100)
     content = models.TextField()
+```
 
+2. 번역본 생성
+    - 파이썬 세상에서 SQL 세상으로 이주시키기 위한 준비로 번역본 생성
+```
+python manage.py makemigrations
 ```
