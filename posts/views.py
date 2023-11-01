@@ -39,3 +39,12 @@ def create(request):
 
     # return redirect('/index/')
     return redirect(f'/posts/{post.id}/')
+
+
+def delete(request, id):
+    # 내가 지우고 싶은 게시물 찾기
+    post = Post.objects.get(id=id)
+    # delete 메소드 호출
+    post.delete()
+
+    return redirect('/index/')

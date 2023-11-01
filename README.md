@@ -130,3 +130,6 @@ def detail(request, id):
 
 ### 2. Create
 - 사용자에게 데이터 받고, 저장
+
+
+### 3. Delete
