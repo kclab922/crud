@@ -33,17 +33,19 @@ pip install django
 ```
 python manage.py runserver
 ```
+`ctrl+c`로 나오기
 
 8. 앱 생성
 ```
 django-admin startapp <app-name>
 ```
 
-9. 앱 등록 =>`settings.py`
+9. 앱 등록 => `<pjt-name>폴더`=> `settings.py`
 ```
 INSTALLED_APPS = [
     ...
     `<app-name>`,
 ]
-    
 ```
+
+10. `urls.py` => `views.py` => `templates/*.html`
