@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/posts/{{post.id}}/update/">
+        <!-- name: url에 뜨는 이름 -->
+        <label for="title">title</label>
+        <!-- 기존정보를 보여주고 수정가능하게 하기 위해 input box 안에 넣은 상황 -->
+        <input type="text" id="'title" name="title" value="{{post.title}}">
+        <label for="content">content</label>
+        <!-- 기존정보를 보여주고 수정가능하게 하기 위해 input box 안에 넣은 상황 -->
+        <textarea name="content" id="content" cols="30" rows="10">{{post.content}}</textarea>
+
+        <input type="submit">
+    </form>
+
+</body>
+</html>

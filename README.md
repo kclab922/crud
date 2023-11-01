@@ -133,3 +133,7 @@ def detail(request, id):
 
 
 ### 3. Delete
+
+
+### 4. Update
+    - create 로직과 read 로직의 합
