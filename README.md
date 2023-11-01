@@ -79,3 +79,39 @@ python manage.py migrate
 ```
 
 4. 생성한 모델을 admin에 등록
+```python
+from django.contrib import admin
+from .models import Post
+     # . => 현재 나와 같은 폴더 내에 있다는 의미
+
+# Register your models here.
+
+admin.site.register(Post)
+```
+
+5. 관리자 계정 생성
+```
+python manage.py createsuperuser
+```
+
+
+## CRUD
+> Create, Read, Update, Delete
+
+### 1. Read
+    - 데이터베이스에 있는 게시물을 읽는 것
+
+- 전체 게시물 출력 (`models.py`)
+```python
+def index(request):
+    # Post라는 클래스 안의 objects에 접근해서 all이라는 메소드 실행
+    posts = Post.objects.all()
+    
+    context = {
+        'posts': posts,
+    }
+
+    return render(request, 'index.html', context)
+```
+
+- 하나의 게시물 출력
