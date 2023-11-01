@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>new</h1>
+
+    <!-- form 태그의 action: a 태그의 href와 동일한 기능(경로지정) -->
+    <!-- 맨앞 슬래시: 경로초기화. url에 120.... 생략하고 그 뒤 슬래시 부터 리셋해서 적는다는 뜻. 없으면 전에 있던 경로까지 나옴 -->
+    <form action="/posts/create/">
+        <!-- name: url에 뜨는 이름 -->
+        <label for="title">title</label>
+        <input type="text" id="'title" name="title">
+        <label for="content">content</label>
+        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

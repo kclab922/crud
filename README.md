@@ -115,3 +115,18 @@ def index(request):
 ```
 
 - 하나의 게시물 출력
+```python
+def detail(request, id):
+    # Post라는 전체데이터에서 get(가져와) 
+    # post는 하나의 게시물이므로 단수. 
+    post = Post.objects.get(id=id)
+
+    context = {
+        'post': post,
+    }
+    return render(request, 'detail.html', context)
+```
+
+
+### 2. Create
+- 사용자에게 데이터 받고, 저장
