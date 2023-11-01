@@ -49,3 +49,18 @@ INSTALLED_APPS = [
 ```
 
 10. `urls.py` => `views.py` => `templates/*.html`
+
+
+
+## Model
+
+1. 모델 정의 (`model.py`)  
+    - 모델명은 기본적으로 단수
+
+```python
+class Post(models.Model):
+    # Charfield 는 TextField에 비해 짦은 내용
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+
+```
